@@ -6,4 +6,3 @@ for x in range(97, 123):
         x += 1
     else:
         print(chr(x), end="")
-        x += 1
