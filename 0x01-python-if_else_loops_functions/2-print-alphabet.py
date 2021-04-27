@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-x = 97
-while x < 123:
+for x in range(97, 123):
 	print(chr(x), end="")
 	x += 1
