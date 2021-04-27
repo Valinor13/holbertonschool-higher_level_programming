@@ -8,6 +8,6 @@ elif number < 0:
     number *= -1
     print("-{:d} and is less than 6 and not 0".format(number % 10))
 elif number % 10 > 5:
-    print("{:d} and is greater than 5.".format(number % 10))
+    print("{:d} and is greater than 5".format(number % 10))
 else:
     print("{:d} and is less than 6 and not 0".format(number % 10))
