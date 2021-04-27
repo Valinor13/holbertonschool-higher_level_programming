@@ -5,4 +5,4 @@ for x in range(97, 123):
     elif x == 113:
         x += 1
     else:
-        print(chr(x), end="")
+        print("{}".format(chr(x)), end="")
