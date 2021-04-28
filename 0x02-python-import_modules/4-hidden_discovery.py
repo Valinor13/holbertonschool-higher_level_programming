@@ -4,7 +4,7 @@ if __name__ == '__main__':
     newdir = dir(hidden_4)
     length = len(newdir)
     for x in range(length):
-        if newdir[x].startswith("__") == True:
+        if newdir[x].startswith("__") is True:
             continue
         else:
             print("{}".format(newdir[x]))
