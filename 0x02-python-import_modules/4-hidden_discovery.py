@@ -7,4 +7,4 @@ if __name__ == '__main__':
         if newdir[x][0] == '_' and newdir[x][1] == '_':
             continue
         else:
-            print(newdir[x])
+            print("{}".format(newdir[x]))
