@@ -2,7 +2,7 @@
 import hidden_4
 if __name__ == '__main__':
     for x in dir(hidden_4):
-        if x.startswith("__"):
+        if x[0] == '_' and x[1] == '_':
             continue
         else:
             print("{}".format(x))
