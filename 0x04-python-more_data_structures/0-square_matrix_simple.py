@@ -7,6 +7,6 @@ def square_matrix_simple(matrix=[]):
         for i in range(len(matrix)):
             column = []
             for x in range(len(matrix[i])):
-               column.append(matrix[i][x] * matrix[i][x])
-            neo.append(column) 
+                column.append(matrix[i][x] * matrix[i][x])
+            neo.append(column)
         return neo

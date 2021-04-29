@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def number_keys(a_dictionary):
-    if bool(a_dictionary) == False:
+    if bool(a_dictionary) is False:
         return 0
     count = 0
     for x in a_dictionary:
