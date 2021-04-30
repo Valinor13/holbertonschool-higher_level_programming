@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def complex_delete(a_dictionary, value):
-#    if bool(a_dictionary) is False:
-#        return None
+    if bool(a_dictionary) is False:
+        return None
     if not value:
         return a_dictionary
     sig = 1
