@@ -4,11 +4,14 @@ def complex_delete(a_dictionary, value):
         return None
     sig = 1
     while sig == 1:
-        for k, v in a_dictionary.items():
-            if v == value:
-                del a_dictionary[k]
-                sig = 1
-                break
-            else:
-                sig = 0
+        if bool(a_dictionary) is True:
+            for k, v in a_dictionary.items():
+                if v == value:
+                    del a_dictionary[k]
+                    sig = 1
+                    break
+                else:
+                    sig = 0
+        else:
+            sig = 0
     return a_dictionary
