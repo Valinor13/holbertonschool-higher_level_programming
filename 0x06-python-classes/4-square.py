@@ -8,15 +8,19 @@ class Square:
     def __init__(self, size=0):
         """Initialization of self and size of square"""
 
-        self.size = size
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
+        self.size = size
 
     def size(self):
         """square size getting function"""
 
+        if type(self.size) is not int:
+            raise TypeError("size must be an integer")
+        if self.size < 0:
+            raise ValueError("size must be >= 0")
         return self.size
 
     def size(self, value):
@@ -35,5 +39,4 @@ class Square:
             raise TypeError("size must be an integer")
         if self.size < 0:
             raise ValueError("size must be >= 0")
-
         return self.size ** 2

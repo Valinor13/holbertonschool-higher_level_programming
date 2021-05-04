@@ -9,11 +9,11 @@ class Square:
         """Initialization of self and size of square"""
 
         self.__size = __size
-
         if type(__size) is not int:
             raise TypeError("size must be an integer")
         if __size < 0:
             raise ValueError("size must be >= 0")
+
     def area(self):
         """A function that returns area of square"""
 
