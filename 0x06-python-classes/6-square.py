@@ -11,7 +11,7 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        if type(position) is not tuple:
+        if type(position) is not tuple or len(position) < 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         if type(position[0]) is not int or type(position[1]) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -56,15 +56,16 @@ class Square:
             raise ValueError("size must be >= 0")
         if self.size == 0:
             print()
-        lon, lat, *scrap = self.position
-        for newline in range(lat):
-            print()
-        for row in range(self.size):
-            for spaces in range(lon):
-                print(" ", end="")
-            for col in range(self.size):
-                print("#", end="")
-            print()
+        else:
+            lon, lat, *scrap = self.position
+            for newline in range(lat):
+                print()
+            for row in range(self.size):
+                for spaces in range(lon):
+                    print(" ", end="")
+                for col in range(self.size):
+                    print("#", end="")
+                print()
 
     def position(self):
         """A function to retrieve the value of the position variable"""
