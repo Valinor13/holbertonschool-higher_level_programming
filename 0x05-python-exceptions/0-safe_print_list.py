@@ -10,7 +10,7 @@ def safe_print_list(my_list=[], x=0):
             if loopcount == x - 1:
                 print()
             printcount += 1
-        except:
+        except Exception:
             print()
             return printcount
         finally:
