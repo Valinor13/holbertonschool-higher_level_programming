@@ -4,7 +4,7 @@ def safe_print_division(a, b):
         print("Inside result: {}".format("None"))
         return None
     try:
-       c = a / b
+        c = a / b
     except:
         print("Inside result: {}".format("None"))
         return None
