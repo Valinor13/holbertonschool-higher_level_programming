@@ -69,7 +69,7 @@ class Square:
     def position(self):
         """A function to retrieve the value of the position variable"""
 
-        if type(self.position) is not tuple:
+        if type(self.position) is not tuple or len(self.position) < 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         if type(self.position[0]) is not int or type(self.position[1]) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
