@@ -22,6 +22,5 @@ class Rectangle:
     pass
     """
 
-
     pass
     """Pass represents an empty class"""
