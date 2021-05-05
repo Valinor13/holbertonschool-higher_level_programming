@@ -88,7 +88,7 @@ class Square:
 
         retstr = ""
         if self.size == 0:
-            return "\n"
+            return ""
         else:
             lon, lat, *scrap = self.position
             for newline in range(lat):
