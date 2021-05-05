@@ -16,3 +16,7 @@ Maybe two will work.
 <BLANKLINE>
 >>> text_indentation("Let's go with 3 for good measure, I don't         see any reason not to")
 Let's go with 3 for good measure, I don't see any reason not to
+>>> text_indentation(117)
+Traceback (most recent call last):
+...
+TypeError: text must be a string

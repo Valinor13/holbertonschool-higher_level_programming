@@ -41,3 +41,20 @@
 #########################
 #########################
 #########################
+>>> print_square("string")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+>>> print_square(-10)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+>>> print_square(4.6)
+####
+####
+####
+####
+>>> print_square(-3.4)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
