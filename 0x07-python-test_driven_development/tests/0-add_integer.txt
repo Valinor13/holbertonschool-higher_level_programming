@@ -1,0 +1,17 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(5, 5)
+10
+>>> add_integer(1, 2147483647)
+2147483648
+>>> add_integer(1, 0)
+1
+>>> add_integer(1,)
+99
+>>> add_integer(-9339 , 1)
+-9338
+>>> add_integer(-2147483647, 2147483647)
+0
+>>> add_integer(777, 777)
+1554
+>>> add_integer(6.4, 4.6)
+10

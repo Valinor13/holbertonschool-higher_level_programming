@@ -1,9 +1,34 @@
 #!/usr/bin/python3
-"""A module to store simple functions for testing"""
+"""
+A module to store simple functions for testing
+
+...
+
+Functions
+---------
+add_integer(a, b=98)
+    Returns two integers or floats added together
+
+Exceptions
+----------
+raise : TypeError
+    Raises a TypeError if a or b are not int or float
+
+"""
 
 
 def add_integer(a, b=98):
-    """A function to safely add two integers"""
+    """A function to safely add two integers
+
+    If the argument b isn't passed in, the default 98 is used
+
+    Parameters
+    ----------
+    a : int, float
+        the first number to add
+    b : int, float
+        the second number to add (default is 98)
+    """
 
     if type(a) is not int and type(a) is not float:
         raise TypeError("a must be an integer")

@@ -1,9 +1,34 @@
 #!/usr/bin/python3
-"""A module to store functions that perform basic math actions"""
+"""
+A module to store simple functions for testing
+
+...
+
+Functions
+---------
+matrix_divided(matrix, div)
+    Returns a matrix of all the numbers in the original
+    matrix divided by the div argument
+
+Exceptions
+----------
+raise : TypeError
+    Raises an error if arguments do not meet expected types
+raise : ZeroDivisionError
+    Raises an error if number to divide by is 0
+"""
 
 
 def matrix_divided(matrix, div):
-    """A function to divide a matrix by a given divisor"""
+    """A function to safely divide a matrix by a number
+
+    Parameters
+    ----------
+    matrix : list
+        a list containing lists contaning ints or floats
+    div : int, float
+        an int or float that the matrix will be divided by
+    """
 
     if type(matrix) is not list:
         raise TypeError("matrix must be a matrix (list of lists"
@@ -20,4 +45,5 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
-    return list(map(lambda x: list(map(lambda xx: round(xx / div, 2), x)), matrix))
+    a = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
+    return a

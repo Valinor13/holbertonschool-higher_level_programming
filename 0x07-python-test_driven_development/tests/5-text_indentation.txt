@@ -1,0 +1,18 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("These don't have to be long tests. Do they? nah: I doubt it")
+These don't have to be long tests.
+<BLANKLINE>
+Do they?
+<BLANKLINE>
+nah:
+<BLANKLINE>
+I doubt it
+>>> text_indentation("I wonder: How many tests do I need? Maybe two will work.")
+I wonder:
+<BLANKLINE>
+How many tests do I need?
+<BLANKLINE>
+Maybe two will work.
+<BLANKLINE>
+>>> text_indentation("Let's go with 3 for good measure, I don't         see any reason not to")
+Let's go with 3 for good measure, I don't see any reason not to
