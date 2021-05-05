@@ -30,9 +30,9 @@ def add_integer(a, b=98):
         the second number to add (default is 98)
     """
 
-    if type(a) is not int and type(a) is not float:
+    if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
-    if type(b) is not int and type(b) is not float:
+    if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
     if type(a) is float:
         a = int(a)

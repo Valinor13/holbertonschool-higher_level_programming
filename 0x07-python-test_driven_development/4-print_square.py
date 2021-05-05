@@ -27,7 +27,7 @@ def print_square(size):
         Input number to determine size of # square
     """
 
-    if type(size) is not int and type(size) is not float:
+    if not isinstance(size, (int, float)):
         raise TypeError("size must be an integer")
     if type(size) is float:
         if size < 0:

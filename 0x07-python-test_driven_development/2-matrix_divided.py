@@ -43,7 +43,7 @@ def matrix_divided(matrix, div):
             raise TypeError("Each row of the matrix must have the same size")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    if type(div) is not int and type(div) is not float:
+    if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     a = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
     return a
