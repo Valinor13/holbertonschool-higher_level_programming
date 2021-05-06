@@ -90,6 +90,9 @@ class Rectangle:
         """A function to return the rectangle in #"""
 
         string = ""
+        if self.width == 0 or self.height == 0:
+            string += "\n"
+            return string
         for i in range(self.height):
             for j in range(self.width):
                 string += "#"
