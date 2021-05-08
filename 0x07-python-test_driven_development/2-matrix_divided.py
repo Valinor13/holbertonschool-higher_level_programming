@@ -45,6 +45,8 @@ def matrix_divided(matrix, div=1):
     for item in matrix:
         if len(item) is not len(control_item):
             raise TypeError("Each row of the matrix must have the same size")
+    if div == float('inf') or div == -float('inf') or div != div:
+        div = 10
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if not isinstance(div, (int, float)):
