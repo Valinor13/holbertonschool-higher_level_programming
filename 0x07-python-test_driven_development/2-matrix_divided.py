@@ -37,6 +37,10 @@ def matrix_divided(matrix, div):
         if type(items) is not list:
             raise TypeError("matrix must be a matrix "
                             "(list of lists) of integers/floats")
+        for num in items:
+            if not isinstance(num, (int, float)):
+                raise TypeError("matrix must be a matrix "
+                                "(list of lists) of integers/floats")
     control_item = matrix[0]
     for item in matrix:
         if len(item) is not len(control_item):
