@@ -17,3 +17,5 @@ TypeError: a must be an integer
 >>> add_integer(6.4, 4.6)
 10
 >>> add_integer(float('inf'), float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
