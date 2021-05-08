@@ -19,7 +19,7 @@ raise : ZeroDivisionError
 """
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix, div=1):
     """A function to safely divide a matrix by a number
 
     Parameters
