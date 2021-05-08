@@ -5,7 +5,6 @@
 2147483648
 >>> add_integer("Wendy", 0)
 Traceback (most recent call last):
-...
 TypeError: a must be an integer
 >>> add_integer(1,)
 99
@@ -17,3 +16,4 @@ TypeError: a must be an integer
 1554
 >>> add_integer(6.4, 4.6)
 10
+>>> add_integer(float('inf'), float('inf'))
