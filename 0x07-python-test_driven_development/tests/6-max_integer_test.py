@@ -13,7 +13,9 @@ class TestMaxInteger(unittest.TestCase):
     def test_of_ints(self):
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
         self.assertEqual(max_integer([4, 3, 2, 1]), 4)
+        self.assertEqual(max_integer([1, 4, 2, 3]), 4)
         self.assertEqual(max_integer([7, 7, 7]), 7)
+        self.assertEqual(max_integer([7]), 7)
         self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
         self.assertEqual(max_integer([-10, 0, 10, 100]), 100)
 
