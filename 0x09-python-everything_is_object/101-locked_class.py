@@ -5,10 +5,4 @@
 class LockedClass:
     """A class that only creates instances called first_name"""
 
-    @property
-    def first_name(self):
-        return self.__first_name
-
-    @first_name.setter
-    def first_name(self, value):
-        self.__first_name = value
+    __slots__ = 'first_name'
