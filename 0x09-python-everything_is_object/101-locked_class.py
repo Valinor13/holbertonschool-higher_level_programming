@@ -11,4 +11,4 @@ class LockedClass:
 
     @first_name.setter
     def first_name(self, value):
-        self._first_name = value
+        self.__first_name = value
