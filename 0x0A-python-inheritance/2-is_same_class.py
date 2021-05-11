@@ -5,6 +5,6 @@
 def is_same_class(obj, a_class):
     """A function that returns True if types match"""
 
-    if isinstance(obj, a_class):
-        return True
-    return False
+    if a_class is object:
+        return False
+    return isinstance(obj, a_class)
