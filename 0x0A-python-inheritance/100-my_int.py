@@ -5,12 +5,12 @@
 class MyInt(int):
     """A class that reverses bool checks"""
 
-    def _init__(self, value):
-
-        self.value = value
+    value = 0
 
     def __eq__(self, other):
 
+        if self.value is 0:
+            return False
         return not other
 
     def __ne__(self, other):
