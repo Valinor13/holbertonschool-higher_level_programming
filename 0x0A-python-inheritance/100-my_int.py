@@ -9,10 +9,10 @@ class MyInt(int):
 
         self.value = value
 
-    def __eq__(self, value):
+    def __eq__(self, other):
 
-        return not bool
+        return not other
 
-    def __ne__(self, value):
+    def __ne__(self, other):
 
-        return not bool
+        return not self.__eq__(other)
