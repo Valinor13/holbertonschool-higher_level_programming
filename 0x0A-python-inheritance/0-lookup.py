@@ -8,4 +8,4 @@ lookup object attributes and methods
 def lookup(obj):
     """A function that returns a list of the object directory"""
 
-    return [dir(obj)]
+    return dir(obj)
