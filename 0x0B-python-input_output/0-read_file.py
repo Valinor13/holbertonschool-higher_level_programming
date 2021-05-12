@@ -7,3 +7,4 @@ def read_file(filename=""):
 
     with open(filename) as f:
         print("".join(f.readlines()), end="")
+        f.close()
