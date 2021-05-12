@@ -8,8 +8,11 @@ import json
 def load_from_json_file(filename):
     """A function that loads a json file as python"""
 
-    with open(filename) as f:
-        string = json.loads("".join(f.readlines()))
-        f.close()
-
+    string= ""
+    try:
+        with open(filename) as f:
+            string = json.loads("".join(f.readlines()))
+            f.close()
+    except:
+        pass
     return string
