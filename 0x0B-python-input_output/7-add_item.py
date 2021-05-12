@@ -11,6 +11,6 @@ lfjf = __import__('6-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
 my_list = [lfjf(filename)]
-for item in sys.argv:
+for i in range(1, len(sys.argv)):
     my_list.append(item)
 stjf(my_list, filename)
