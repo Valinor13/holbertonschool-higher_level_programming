@@ -10,6 +10,11 @@ stjf = __import__('5-save_to_json_file').save_to_json_file
 lfjf = __import__('6-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
+try:
+    f = open(filename, "x")
+    f.close()
+except:
+    pass
 my_list = [lfjf(filename)]
 for i in range(1, len(sys.argv)):
     my_list.append(str(sys.argv[i]))
