@@ -9,6 +9,6 @@ def load_from_json_file(filename):
     """A function that loads a json file as python"""
 
     with open(filename) as f:
-        string = json.loads("".join(f.readlines()))
+        my_obj = json.loads(f.read())
         f.close()
-    return string
+    return my_obj
