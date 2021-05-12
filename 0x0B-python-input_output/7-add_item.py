@@ -18,7 +18,7 @@ if __name__ == "__main__":
     except:
         with open(filename) as f:
             my_string = lfjf(filename)
-            my_list.append(my_string)
+            my_list.extend(my_string)
     for i in range(1, len(sys.argv)):
         my_list.append(str(sys.argv[i]))
     stjf(my_list, filename)
