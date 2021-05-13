@@ -31,5 +31,5 @@ class Student:
 
     def reload_from_json(self, json):
 
-        for k, v in json:
-            setattr(self, k, v)
+        for k in json:
+            setattr(self, k, json[k])
