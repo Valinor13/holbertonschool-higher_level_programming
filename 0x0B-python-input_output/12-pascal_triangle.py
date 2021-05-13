@@ -14,6 +14,6 @@ def pascal_triangle(n):
             if j == 0 or j == i:
                 row_list.append(1)
             else:
-                row_list.append(my_matrix[i - 1][j -  1] + my_matrix[i - 1][j])
+                row_list.append(my_matrix[i - 1][j - 1] + my_matrix[i - 1][j])
         my_matrix.append(row_list)
     return my_matrix
