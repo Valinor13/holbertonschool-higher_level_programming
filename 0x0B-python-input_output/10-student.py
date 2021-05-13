@@ -13,8 +13,8 @@ class Student:
 
     def to_json(self, attrs=None):
 
-        a = dict()
-        if not attrs:
+        a = {}
+        if attrs is None:
             return vars(self)
         if type(attrs) is str:
             try:
