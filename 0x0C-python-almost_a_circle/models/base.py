@@ -24,10 +24,6 @@ class Base:
     def to_json_string(list_dictionaries):
         """A function that converts a dictionary to a json string"""
 
-        if list_dictionaries is None or list_dictionaries is {}:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
-        my_string = ""
-        for item in list_dictionaries:
-            j_string = json.dumps(item)
-            my_string += j_string
-        return [my_string]
+        return json.dumps(list_dictionaries)
