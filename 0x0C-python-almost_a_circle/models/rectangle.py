@@ -17,9 +17,12 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """A function that assigns arguments to attributes"""
 
+        if args is None or args is ():
+            for key in kwargs:
+                setattr(self, key, kwargs[key])
         lst = list(args)
         if len(lst) is 5:
             self.y = lst[4]
