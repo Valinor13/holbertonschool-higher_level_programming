@@ -3,6 +3,7 @@
 
 
 from models.base import Base
+import inspect
 
 
 class Rectangle(Base):
@@ -36,9 +37,14 @@ class Rectangle(Base):
         return my_string
 
     def to_dictionary(self):
-        """A function that returns the dictionary representation of Rectangle"""
+        """A function that returns the dictionary rep of Rectangle"""
 
-        return vars(self)
+        my_dict = {}
+        for item in inspect.getmembers(self):
+            if not item[0].startswith('_'):
+                if not inspect.ismethod(item[1]):
+                    my_dict[item[0]] = item[1]
+        return my_dict
 
     def display(self):
         """A function that displays the rectangle in #"""
