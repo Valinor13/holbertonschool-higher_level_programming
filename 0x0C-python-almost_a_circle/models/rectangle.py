@@ -27,7 +27,11 @@ class Rectangle(Base):
     def display(self):
         """A function that displays the rectangle in #"""
 
+        for newline in range(self.y):
+            print()
         for row in range(self.height):
+            for spaces in range(self.x):
+                print(" ", end = "")
             for col in range(self.width):
                 print("#", end="")
             print()
