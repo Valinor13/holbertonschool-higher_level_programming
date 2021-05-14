@@ -17,6 +17,14 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def display(self):
+        """A function that displays the rectangle in #"""
+
+        for row in range(self.height):
+            for col in range(self.width):
+                print("#", end="")
+            print()
+
     def area(self):
         """A function that calculates the area of the rectangle"""
 
