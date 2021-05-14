@@ -50,11 +50,12 @@ class Square(Rectangle):
     def size(self):
         """The size getter function"""
 
-        return self.__size
+        return self.__width
 
     @size.setter
     def size(self, value):
         """The size setter function"""
 
         super().integer_validator("width", value)
-        self.__size = value
+        self.__width = value
+        self.__height = value
