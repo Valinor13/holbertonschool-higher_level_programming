@@ -17,6 +17,13 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        """A function that overloads the __str__ built-in function"""
+
+        my_string = "[Rectangle] ({}) {}/".format(self.id, self.x)
+        my_string += "{}- {}/{}".format(self.y, self.width, self.height)
+        return my_string
+
     def display(self):
         """A function that displays the rectangle in #"""
 
