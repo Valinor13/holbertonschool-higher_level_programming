@@ -7,6 +7,7 @@ import inspect
 
 
 class Rectangle(Base):
+
     """A class that handles Rectangle shapes"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -42,7 +43,8 @@ class Rectangle(Base):
         my_dict = {}
         for item in inspect.getmembers(self):
             if not item[0].startswith('_'):
-                if not inspect.ismethod(item[1]):
+                if not inspect.ismethod(item[1]) \
+                   and not inspect.isfunction(item[1]):
                     my_dict[item[0]] = item[1]
         return my_dict
 

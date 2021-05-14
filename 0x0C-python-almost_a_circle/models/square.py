@@ -7,6 +7,7 @@ import inspect
 
 
 class Square(Rectangle):
+
     """A class that handles a rectangle with equal sides"""
 
     def __init__(self, size, x=0, y=0, id=None):
@@ -28,7 +29,8 @@ class Square(Rectangle):
         my_dict = {}
         for item in inspect.getmembers(self):
             if not item[0].startswith('_'):
-                if not inspect.ismethod(item[1]):
+                if not inspect.ismethod(item[1]) \
+                        and not inspect.isfunction(item[1]):
                     if item[0] is 'width' or item[0] is 'height':
                         continue
                     else:
