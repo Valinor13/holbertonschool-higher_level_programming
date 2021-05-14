@@ -35,6 +35,11 @@ class Rectangle(Base):
         my_string += "{} - {}/{}".format(self.y, self.width, self.height)
         return my_string
 
+    def to_dictionary(self):
+        """A function that returns the dictionary representation of Rectangle"""
+
+        return vars(self)
+
     def display(self):
         """A function that displays the rectangle in #"""
 
