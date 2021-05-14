@@ -23,21 +23,9 @@ class Rectangle(Base):
         if args is None or args is ():
             for key in kwargs:
                 setattr(self, key, kwargs[key])
-        lst = list(args)
-        if len(lst) is 5:
-            self.y = lst[4]
-            lst.pop()
-        if len(lst) is 4:
-            self.x = lst[3]
-            lst.pop()
-        if len(lst) is 3:
-            self.height = lst[2]
-            lst.pop()
-        if len(lst) is 2:
-            self.width = lst[1]
-            lst.pop()
-        if len(lst) is 1:
-            self.id = lst[0]
+        lattrs = ["id", "width", "height", "x", "y"]
+        for value in range(len(args)):
+            setattr(self, lattrs[value], args[value])
 
     def __str__(self):
         """A function that overloads the __str__ built-in function"""
