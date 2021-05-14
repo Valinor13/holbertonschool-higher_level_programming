@@ -14,7 +14,6 @@ class Square(Rectangle):
         self.size = size
         super().__init__(size, size, x, y, id)
 
-
     def __str__(self):
         """A function to overload __str__"""
 
