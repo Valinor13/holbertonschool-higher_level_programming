@@ -18,7 +18,7 @@ class Square(Rectangle):
         """A function to overload __str__"""
 
         s = "[Square] ({}) {}/".format(self.id, self.x)
-        s += "{} - {}".format(self.id, self.x)
+        s += "{} - {}".format(self.y, self.size)
         return s
 
     @property
