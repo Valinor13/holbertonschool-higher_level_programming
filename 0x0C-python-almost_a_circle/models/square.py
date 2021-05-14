@@ -3,6 +3,7 @@
 
 
 from models.rectangle import Rectangle
+import inspect
 
 
 class Square(Rectangle):
@@ -20,6 +21,19 @@ class Square(Rectangle):
         s = "[Square] ({}) {}/".format(self.id, self.x)
         s += "{} - {}".format(self.y, self.size)
         return s
+
+    def to_dictionary(self):
+        """A function that returns the dictionary rep of Square"""
+
+        my_dict = {}
+        for item in inspect.getmembers(self):
+            if not item[0].startswith('_'):
+                if not inspect.ismethod(item[1]):
+                    if item[0] is 'width' or item[0] is 'height':
+                        continue
+                    else:
+                        my_dict[item[0]] = item[1]
+        return my_dict
 
     def update(self, *args, **kwargs):
         """A function that assigns arguments to attributes"""
