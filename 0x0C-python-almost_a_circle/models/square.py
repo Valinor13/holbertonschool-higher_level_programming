@@ -31,5 +31,5 @@ class Square(Rectangle):
     def size(self, value):
         """The size setter function"""
 
-        super().integer_validator("size", value)
+        super().integer_validator("width", value)
         self.__size = value
