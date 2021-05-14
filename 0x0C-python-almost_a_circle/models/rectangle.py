@@ -21,7 +21,7 @@ class Rectangle(Base):
         """A function that overloads the __str__ built-in function"""
 
         my_string = "[Rectangle] ({}) {}/".format(self.id, self.x)
-        my_string += "{}- {}/{}".format(self.y, self.width, self.height)
+        my_string += "{} - {}/{}".format(self.y, self.width, self.height)
         return my_string
 
     def display(self):
