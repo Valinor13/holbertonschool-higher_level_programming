@@ -17,6 +17,25 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def update(self, *args):
+        """A function that assigns arguments to attributes"""
+
+        lst = list(args)
+        if len(lst) is 5:
+            self.y = lst[4]
+            lst.pop()
+        if len(lst) is 4:
+            self.x = lst[3]
+            lst.pop()
+        if len(lst) is 3:
+            self.height = lst[2]
+            lst.pop()
+        if len(lst) is 2:
+            self.width = lst[1]
+            lst.pop()
+        if len(lst) is 1:
+            self.id = lst[0]
+
     def __str__(self):
         """A function that overloads the __str__ built-in function"""
 
@@ -31,7 +50,7 @@ class Rectangle(Base):
             print()
         for row in range(self.height):
             for spaces in range(self.x):
-                print(" ", end = "")
+                print(" ", end="")
             for col in range(self.width):
                 print("#", end="")
             print()
