@@ -21,6 +21,14 @@ class Base:
             self.id = id
 
     @classmethod
+    def create(cls, **dictionary):
+        """A function that creates and updates a class instance"""
+
+        dum3 = cls(3, 3)
+        dum3.update(**dictionary)
+        return dum3
+
+    @classmethod
     def save_to_file(cls, list_objs):
         """A function that writes json to file"""
 
