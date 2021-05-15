@@ -27,11 +27,14 @@ class Base:
 
         filename = cls.__name__ + ".json"
         if os.path.exists(filename):
+            inst_list = []
             with open(filename) as f:
-                my_string = cls.from_json_string(f.read())
-            print(my_string)
-            my_obj = cls.create(**my_string)
-            return my_obj
+                my_list = cls.from_json_string(f.read())
+            for item in my_list:
+                my_dict = dict(item)
+                new_inst = cls.create(**my_dict)
+                inst_list.append(new_inst)
+            return inst_list
         else:
             return []
 
