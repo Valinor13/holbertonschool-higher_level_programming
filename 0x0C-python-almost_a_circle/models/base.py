@@ -28,13 +28,12 @@ class Base:
         filename = cls.__name__ + ".json"
         if os.path.exists(filename):
             with open(filename) as f:
-               my_string = cls.from_json_string(f.read())
+                my_string = cls.from_json_string(f.read())
             print(my_string)
             my_obj = cls.create(**my_string)
             return my_obj
         else:
             return []
-
 
     @classmethod
     def create(cls, **dictionary):
