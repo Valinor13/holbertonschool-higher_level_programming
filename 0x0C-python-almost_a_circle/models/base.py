@@ -38,6 +38,14 @@ class Base:
         return bytecount
 
     @staticmethod
+    def from_json_string(json_string):
+        """A function that converts a json string to a list"""
+
+        if not json_string or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
+
+    @staticmethod
     def to_json_string(list_dictionaries):
         """A function that converts a dictionary to a json string"""
 
