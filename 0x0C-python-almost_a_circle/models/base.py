@@ -24,7 +24,7 @@ class Base:
     def create(cls, **dictionary):
         """A function that creates and updates a class instance"""
 
-        dum3 = cls(3)
+        dum3 = cls(3, 2)
         dum3.update(**dictionary)
         return dum3
 
