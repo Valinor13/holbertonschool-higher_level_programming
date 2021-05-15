@@ -24,12 +24,14 @@ class Base:
     def save_to_file(cls, list_objs):
         """A function that writes json to file"""
 
+        filename = cls.__name__ + ".json"
         my_string = ""
-        for item in list_objs:
-            my_dict = cls.to_dictionary(item)
-            j_string = cls.to_json_string(my_dict)
-            my_string += j_string
-        with open('Rectangle.json', "w") as f:
+        if list_objs:
+            for item in list_objs:
+                my_dict = cls.to_dictionary(item)
+                j_string = cls.to_json_string(my_dict)
+                my_string += j_string
+        with open(filename, "w") as f:
             bytecount = f.write(my_string)
         return bytecount
 
