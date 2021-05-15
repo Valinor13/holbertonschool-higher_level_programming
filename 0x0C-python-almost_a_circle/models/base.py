@@ -20,6 +20,19 @@ class Base:
         else:
             self.id = id
 
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """A function that writes json to file"""
+
+        my_string = ""
+        for item in list_objs:
+            my_dict = cls.to_dictionary(item)
+            j_string = cls.to_json_string(my_dict)
+            my_string += j_string
+        with open('Rectangle.json', "w") as f:
+            bytecount = f.write(my_string)
+        return bytecount
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """A function that converts a dictionary to a json string"""
