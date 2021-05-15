@@ -25,14 +25,16 @@ class Base:
         """A function that writes json to file"""
 
         filename = cls.__name__ + ".json"
-        my_string = ""
         if list_objs:
+            my_list = []
             for item in list_objs:
                 my_dict = cls.to_dictionary(item)
-                j_string = cls.to_json_string(my_dict)
-                my_string += j_string
+                my_list.append(my_dict)
+            j_string = cls.to_json_string(my_list)
+        else:
+            j_string = "[]"
         with open(filename, "w") as f:
-            bytecount = f.write(my_string)
+            bytecount = f.write(j_string)
         return bytecount
 
     @staticmethod
