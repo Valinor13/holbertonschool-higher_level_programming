@@ -3,6 +3,7 @@
 
 
 import json
+import os
 
 
 class Base:
@@ -21,12 +22,32 @@ class Base:
             self.id = id
 
     @classmethod
+    def load_from_file(cls):
+        """A function that loads a list of class instances from a json file"""
+
+        filename = cls.__name__ + ".json"
+        if os.path.exists(filename):
+            with open(filename) as f:
+               my_string = cls.from_json_string(f.read())
+            print(my_string)
+            my_obj = cls.create(**my_string)
+            return my_obj
+        else:
+            return []
+
+
+    @classmethod
     def create(cls, **dictionary):
         """A function that creates and updates a class instance"""
 
-        dum3 = cls(3, 2)
-        dum3.update(**dictionary)
-        return dum3
+        if len(dictionary) == 1:
+            dum1 = cls(1)
+            dum1.update(**dictionary)
+            return dum1
+        else:
+            dum3 = cls(3, 2)
+            dum3.update(**dictionary)
+            return dum3
 
     @classmethod
     def save_to_file(cls, list_objs):
