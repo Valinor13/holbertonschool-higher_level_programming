@@ -20,6 +20,41 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+#
+#    @classmethod
+#    def save_to_file_csv(cls, list_objs):
+#        """A function that saves a string to a csv formatted file"""
+#
+#        filename = cls.__name__ + ".csv"
+#        if list_objs:
+#            c_list = []
+#            if cls.__name__ is "Rectangle":
+#                for item in list_objs:
+#                    my_list = []
+#                    my_dict = cls.to_dictionary(item)
+#                    my_list.append(my_dict['id'])
+#                    my_list.append(my_dict['width'])
+#                    my_list.append(my_dict['height'])
+#                    my_list.append(my_dict['x'])
+#                    my_list.append(my_dict['y'])
+#                    string_ints = [str(num) for num in my_list]
+#                    c_string = ','.join(string_ints)
+#                    c_list.append(c_string)
+#            elif cls.__name__ is "Square":
+#                for item in list_objs:
+#                    my_list = []
+#                    my_dict = cls.to_dictionary(item)
+#                    my_list.append(my_dict['id'])
+#                    my_list.append(my_dict['size'])
+#                    my_list.append(my_dict['x'])
+#                    my_list.append(my_dict['y'])
+#                    string_ints = [str(num) for num in my_list]
+#                    c_string = ','.join(string_ints)
+#                    c_list.append(c_string)
+#            else:
+#                c_string = []
+#            with open(filename, "w") as f:
+#                bytecount = f.write(c_list)
 
     @classmethod
     def load_from_file(cls):
