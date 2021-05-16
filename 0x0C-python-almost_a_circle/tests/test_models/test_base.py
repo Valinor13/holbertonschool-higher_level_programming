@@ -13,7 +13,7 @@ class TestBaseClass(unittest.TestCase):
 
     def test_auto_id(self):
         b1 = Base()
-        self.assertNotEqual(b1.id, 0)
+        self.assertEqual(b1.id, 1)
 
 if __name__ == '__main__':
     unittest.main()
