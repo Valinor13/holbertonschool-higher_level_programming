@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A module that contains unit tests for the Rectangle class"""
 
+
 import io
 import unittest
 import unittest.mock
@@ -8,8 +9,14 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class TestRectClass(unittest.TestCase):
     """A class that stores tests for Rectangle"""
+
+    def text_to_dictionary(self):
+        rect1 = Rectangle(5, 5, 5, 5, 5)
+        self.assertEqual(rect1.to_dictionary(), "{'x': 5, 'y': 5, 'id': 5,"
+                         "'height': 5, 'width': 5}")
 
     def test_of_update_empty(self):
         rect1 = Rectangle(5, 5, 5, 5, 5)
