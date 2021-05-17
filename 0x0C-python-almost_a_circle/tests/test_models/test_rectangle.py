@@ -18,6 +18,8 @@ class TestRectClass(unittest.TestCase):
     def test_rectangle_raises_errors(self):
         with self.assertRaises(TypeError):
             rect1 = Rectangle("1", 2)
+        with self.assertRaises(TypeError):
+            rect = Rectangle(1, "2")
 
 if __name__ == '__main__':
         unittest.main()
