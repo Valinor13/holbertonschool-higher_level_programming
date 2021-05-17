@@ -39,6 +39,10 @@ class TestRectClass(unittest.TestCase):
         with self.assertRaises(ValueError):
             rect1 = Rectangle(1, 2, 3, -4)
 
+    def test_str_exists(self):
+        rect1 = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(rect1.__str__(), "[Rectangle] (12) 2/1 - 4/6")
+
     def test_area_exists(self):
         rect1 = Rectangle(3, 4)
         self.assertEqual(rect1.area(), 12)
