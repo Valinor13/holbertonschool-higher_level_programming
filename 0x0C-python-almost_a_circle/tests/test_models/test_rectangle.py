@@ -1,14 +1,20 @@
 #!/usr/bin/python3
 """A module that contains unit tests for the Rectangle class"""
 
-
+import io
 import unittest
+import unittest.mock
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
 class TestRectClass(unittest.TestCase):
     """A class that stores tests for Rectangle"""
+
+    @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
+    def test_of_display(self):
+        rect1 = Rectangle(1, 1)
+        self.assertEqual(rect1.display(), "#\n")
 
     def test_rectangle_exists(self):
         rect1 = Rectangle(1, 2)
