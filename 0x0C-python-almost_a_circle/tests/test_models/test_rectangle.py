@@ -14,11 +14,17 @@ from models.square import Square
 class TestRectClass(unittest.TestCase):
     """A class that stores tests for Rectangle"""
 
-    def test_save_to_file(self):
-        rect1 = Rectangle(1, 1, 1, 1, 1)
-        rect2 = Rectangle(2, 2, 2, 2, 2)
-        Rectangle.save_to_file([rect1, rect2])
-        self.assertTrue(os.path.isfile("Rectangle.json"))
+    def test_save_to_file_values(self):
+        Rectangle.save_to_file([Rectangle(1, 2)])
+        self.assertTrue(os.path.exists("Rectangle.json"))
+
+    def test_save_to_file_none(self):
+        Rectangle.save_to_file(None)
+        self.assertTrue(os.path.exists("Rectangle.json"))
+
+    def test_save_to_file_empty(self):
+        Rectangle.save_to_file([])
+        self.assertTrue(os.path.exists("Rectangle.json"))
 
     def test_for_create(self):
         rect1 = Rectangle(3, 5, 1, 2, 4)
