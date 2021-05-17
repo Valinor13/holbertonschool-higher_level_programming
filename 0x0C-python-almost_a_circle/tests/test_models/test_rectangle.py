@@ -14,7 +14,8 @@ class TestRectClass(unittest.TestCase):
         """A module that contains unit tests for the Base class"""
 
         rect1 = Rectangle(1, 2)
-        self.assertIsInstance(rect1, Rectangle)
+        self.assertEqual(rect1.width, 1)
+        self.assertEqual(rect1.height, 2)
 
 if __name__ == '__main__':
         unittest.main()
