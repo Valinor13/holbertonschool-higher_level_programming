@@ -15,7 +15,7 @@ class TestRectClass(unittest.TestCase):
         self.assertEqual(rect1.width, 1)
         self.assertEqual(rect1.height, 2)
 
-    def test_rectangle_raises_errors(self):
+    def test_rectangle_type_errors(self):
         with self.assertRaises(TypeError):
             rect1 = Rectangle("1", 2)
         with self.assertRaises(TypeError):
@@ -24,6 +24,20 @@ class TestRectClass(unittest.TestCase):
             rect1 = Rectangle(1, 2, "3")
         with self.assertRaises(TypeError):
             rect1 = Rectangle(1, 2, 3, "4")
+
+    def test_rectangle_value_errors(self):
+        with self.assertRaises(ValueError):
+            rect1 = Rectangle(-1, 2)
+        with self.assertRaises(ValueError):
+            rect1 = Rectangle(1, -2)
+        with self.assertRaises(ValueError):
+            rect1 = Rectangle(0, 2)
+        with self.assertRaises(ValueError):
+            rect1 = Rectangle(1, 0)
+        with self.assertRaises(ValueError):
+            rect1 = Rectangle(1, 2, -3)
+        with self.assertRaises(ValueError):
+            rect1 = Rectangle(1, 2, 3, -4)
 
     def test_rectangle_full_profile(self):
         rect1 = Rectangle(1, 2, 3, 4, 5)
