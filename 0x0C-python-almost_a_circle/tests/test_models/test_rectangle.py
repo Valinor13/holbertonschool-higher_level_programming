@@ -19,7 +19,11 @@ class TestRectClass(unittest.TestCase):
         with self.assertRaises(TypeError):
             rect1 = Rectangle("1", 2)
         with self.assertRaises(TypeError):
-            rect = Rectangle(1, "2")
+            rect1 = Rectangle(1, "2")
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(1, 2, "3")
+        with self.assertRaises(TypeError):
+            rect1 = Rectangle(1, 2, 3, "4")
 
 if __name__ == '__main__':
         unittest.main()
