@@ -13,12 +13,21 @@ from models.square import Square
 class TestRectClass(unittest.TestCase):
     """A class that stores tests for Rectangle"""
 
+    def test_for_create(self):
+        rect1 = Rectangle(3, 5, 1, 2, 4)
+        rect1_dictionary = rect1.to_dictionary()
+        rect2 = Rectangle.create(**rect1_dictionary)
+        self.assertEqual(rect2.width, 3)
+        self.assertEqual(rect2.height, 5)
+        self.assertEqual(rect2.x, 1)
+        self.assertEqual(rect2.y, 2)
+        self.assertEqual(rect2.id, 4)
+
     @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
-    def text_to_dictionary(self, mock_stdout):
+    def test_to_dictionary(self, mock_stdout):
         rect1 = Rectangle(5, 5, 5, 5, 5)
-        print(rect1.to_dictionary())
-        self.assertEqual(mock_stdout.getvalue(), "{'x': 5, 'y': 5, 'id': 5,"
-                         "'height': 5, 'width': 5}")
+        print(type(rect1.to_dictionary()))
+        self.assertEqual(mock_stdout.getvalue(), "<class 'dict'>\n")
 
     def test_of_update_empty(self):
         rect1 = Rectangle(5, 5, 5, 5, 5)
