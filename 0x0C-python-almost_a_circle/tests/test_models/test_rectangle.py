@@ -39,6 +39,10 @@ class TestRectClass(unittest.TestCase):
         with self.assertRaises(ValueError):
             rect1 = Rectangle(1, 2, 3, -4)
 
+    def test_area_exists(self):
+        rect1 = Rectangle(3, 4)
+        self.assertEqual(rect1.area(), 12)
+
     def test_rectangle_full_profile(self):
         rect1 = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(rect1.width, 1)
