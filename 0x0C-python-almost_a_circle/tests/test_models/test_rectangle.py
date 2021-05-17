@@ -25,5 +25,13 @@ class TestRectClass(unittest.TestCase):
         with self.assertRaises(TypeError):
             rect1 = Rectangle(1, 2, 3, "4")
 
+    def test_rectangle_full_profile(self):
+        rect1 = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(rect1.width, 1)
+        self.assertEqual(rect1.height, 2)
+        self.assertEqual(rect1.x, 3)
+        self.assertEqual(rect1.y, 4)
+        self.assertEqual(rect1.id, 5)
+
 if __name__ == '__main__':
         unittest.main()
