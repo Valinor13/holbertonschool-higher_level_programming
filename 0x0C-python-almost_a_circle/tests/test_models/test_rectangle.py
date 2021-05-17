@@ -18,7 +18,7 @@ class TestRectClass(unittest.TestCase):
         self.assertEqual(mock_stdout.getvalue(), "#\n")
 
     @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
-    def test_of_display(self, mock_stdout):
+    def test_of_display_full(self, mock_stdout):
         rect1 = Rectangle(1, 1, 1, 1)
         rect1.display()
         self.assertEqual(mock_stdout.getvalue(), "\n #\n")
