@@ -12,9 +12,10 @@ class TestRectClass(unittest.TestCase):
     """A class that stores tests for Rectangle"""
 
     @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
-    def test_of_display(self):
+    def test_of_display(self, mock_stdout):
         rect1 = Rectangle(1, 1)
-        self.assertEqual(rect1.display(), "#\n")
+        rect1.display()
+        self.assertEqual(mock_stdout.getvalue(), "#\n")
 
     def test_rectangle_exists(self):
         rect1 = Rectangle(1, 2)
