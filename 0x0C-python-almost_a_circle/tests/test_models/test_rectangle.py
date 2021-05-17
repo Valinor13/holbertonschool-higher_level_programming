@@ -11,6 +11,15 @@ from models.square import Square
 class TestRectClass(unittest.TestCase):
     """A class that stores tests for Rectangle"""
 
+    def test_of_update_empty(self):
+        rect1 = Rectangle(5, 5, 5, 5, 5)
+        rect1.update()
+        self.assertEqual(rect1.width, 5)
+        self.assertEqual(rect1.height, 5)
+        self.assertEqual(rect1.x, 5)
+        self.assertEqual(rect1.y, 5)
+        self.assertEqual(rect1.id, 5)
+
     @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
     def test_of_display(self, mock_stdout):
         rect1 = Rectangle(1, 1)
