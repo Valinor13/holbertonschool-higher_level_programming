@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" """
+"""A module containing commands to select from a database"""
 
 
 import MySQLdb
