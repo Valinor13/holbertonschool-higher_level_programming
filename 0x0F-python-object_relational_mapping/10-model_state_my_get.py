@@ -24,7 +24,10 @@ if __name__ == "__main__":
 
     try:
         for state in states:
-            if state.name == sys.argv[4]:
+            if len(state.name) == 0:
+                sig = 1
+                break
+            elif state.name == sys.argv[4]:
                 print(state.id)
                 sig = 0
                 break
