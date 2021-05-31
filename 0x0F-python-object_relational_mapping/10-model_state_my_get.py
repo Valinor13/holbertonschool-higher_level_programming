@@ -22,14 +22,15 @@ if __name__ == "__main__":
 
     states = session.query(State)
 
-    if sys.argv[4] is None:
+    try:
+        for state in states:
+            if state.name == sys.argv[4]:
+                print(state.id)
+                sig = 0
+                break
+            else:
+                sig = 1
+    except:
         sig = 1
-    for state in states:
-        if state.name == sys.argv[4]:
-            print(state.id)
-            sig = 0
-            break
-        else:
-            sig = 1
     if sig == 1:
         print("Not found")
