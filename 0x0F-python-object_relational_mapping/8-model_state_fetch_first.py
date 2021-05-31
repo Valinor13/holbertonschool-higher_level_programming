@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Create a session for database access"""
+"""Start link class to table in database"""
 
 
 import sys
@@ -19,7 +19,5 @@ if __name__ == "__main__":
 
     session = Session()
 
-    states = session.query(State)
-
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+    states = session.query(State).filter_by(id=1)
+    print("{}: {}".format(states[0].id, states[0].name))
