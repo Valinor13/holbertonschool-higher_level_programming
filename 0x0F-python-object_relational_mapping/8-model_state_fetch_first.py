@@ -20,4 +20,7 @@ if __name__ == "__main__":
     session = Session()
 
     states = session.query(State).filter_by(id=1).first()
-    print("{}: {}".format(states.id, states.name))
+    if not states:
+        print("Nothing")
+    else:
+        print("{}: {}".format(states.id, states.name))
