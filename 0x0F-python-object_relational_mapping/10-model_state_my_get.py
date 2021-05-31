@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     states = session.query(State)
 
-    if not sys.argv[4]:
+    if sys.argv[4] is None:
         sig = 1
     for state in states:
         if state.name == sys.argv[4]:
