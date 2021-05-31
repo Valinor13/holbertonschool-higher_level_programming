@@ -20,20 +20,9 @@ if __name__ == "__main__":
 
     session = Session()
 
-    states = session.query(State)
+    states = session.query(State).filter_by(name=sys.argv[4]).first()
 
-    try:
-        for state in states:
-            if len(state.name) == 0:
-                sig = 1
-                break
-            elif state.name == sys.argv[4]:
-                print(state.id)
-                sig = 0
-                break
-            else:
-                sig = 1
-    except:
-        sig = 1
-    if sig == 1:
-        print("Not found")
+    if not states:
+        print("Not Found")
+    else:
+        print(states.id)
