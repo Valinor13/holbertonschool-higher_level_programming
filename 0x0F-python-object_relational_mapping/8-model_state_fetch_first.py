@@ -19,5 +19,5 @@ if __name__ == "__main__":
 
     session = Session()
 
-    states = session.query(State).filter_by(id=1)
-    print("{}: {}".format(states[0].id, states[0].name))
+    states = session.query(State).filter_by(id=1).first()
+    print("{}: {}".format(states.id, states.name))
