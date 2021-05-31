@@ -19,7 +19,8 @@ if __name__ == "__main__":
 
     session = Session()
 
-    louisiana = State(name="Louisiana")
-    session.add(louisiana)
+    states = session.query(State)
+    for state in states:
+        if state.id == 2:
+            state.name = "New Mexico"
     session.commit()
-    print(louisiana.id)
