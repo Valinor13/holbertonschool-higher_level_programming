@@ -2,9 +2,9 @@
 """A module that contains City inherited from Base"""
 
 
-import MySQLdb
 from sqlalchemy import Column, Integer, String
-from model_state import Base, State
+from sqlalchemy.sql.schema import ForeignKey
+from model_state import State
 from sqlalchemy.ext.declarative import declarative_base
 
 
